@@ -1,0 +1,33 @@
+.btn {
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  transition: 0.3s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-primary {
+  background: var(--yellow-main);
+  color: #1a1605;
+  box-shadow: 0 6px 20px rgba(250, 204, 21, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(250, 204, 21, 0.55);
+}
+
+.btn-outline {
+  border: 2px solid var(--yellow-main);
+  color: var(--text-main);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: rgba(250, 204, 21, 0.15);
+}

@@ -1,0 +1,49 @@
+.programs {
+  padding-top: calc(var(--nav-height) + 70px);
+  padding-bottom: 90px;
+  text-align: center;
+}
+
+.program-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.program-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 2.5rem;
+  transition: 0.3s;
+}
+
+.program-card:hover {
+  border-color: var(--yellow-main);
+  transform: translateY(-6px);
+}
+
+.age {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--yellow-main);
+  text-transform: uppercase;
+}
+
+.program-card p {
+  margin: 1rem 0;
+  color: var(--text-dim);
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tags span {
+  padding: 4px 12px;
+  background: rgba(250, 204, 21, 0.15);
+  border-radius: 8px;
+  font-size: 0.8rem;
+}
