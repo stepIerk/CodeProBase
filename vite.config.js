@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/CodeProBase/src',  // ← заменить на имя твоего GitHub репозитория
+  base: '/CodeProBase/src/',  // ← заменить на имя твоего GitHub репозитория
 })
