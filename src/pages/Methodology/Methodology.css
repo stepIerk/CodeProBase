@@ -1,82 +1,102 @@
-.methodology {
-  padding-top: calc(var(--nav-height) + 40px);
-  padding-bottom: 90px;
-  text-align: center;
+.methodology-shell {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.methodology-title {
+  max-width: 16ch;
 }
 
 .method-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
 }
 
-/* Используем те же стили карточек, что и в Home.jsx */
-.methodology .card {
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
-  border-radius: 24px;
-  padding: 2.4rem;
-  text-align: left;
-  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  flex-direction: column;
+.method-card {
+  display: grid;
   gap: 1rem;
+  padding: 1.5rem;
 }
 
-.methodology .card:hover {
-  transform: translateY(-6px);
-  border-color: var(--yellow-main);
-  box-shadow: 0 10px 30px rgba(250, 204, 21, 0.1);
+.method-icon {
+  width: 52px;
+  height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  color: #161105;
+  background: linear-gradient(135deg, var(--yellow-main), var(--yellow-soft));
+  box-shadow: 0 14px 28px rgba(250, 204, 21, 0.12);
 }
 
-.icon-yellow {
-  color: var(--yellow-main);
+.method-card h2 {
+  font-size: 1.5rem;
+  letter-spacing: -0.04em;
 }
 
-.methodology .card h3 {
-  font-size: 1.4rem;
-  margin: 0;
-  color: #fff;
-}
-
-.methodology .card p {
+.method-card p,
+.bottom-copy p,
+.method-point p {
   color: var(--text-dim);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin: 0;
 }
 
 .bottom-info {
-  margin-top: 5rem;
-  padding: 3rem;
-  background: linear-gradient(135deg, rgba(250, 204, 21, 0.05) 0%, rgba(0,0,0,0) 100%);
-  border-radius: 32px;
-  border: 1px dashed var(--glass-border);
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 1.2rem;
+  padding: 1.5rem;
 }
 
-.bottom-info h3 {
-  margin-bottom: 1.5rem;
+.bottom-copy {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+
+.bottom-tag {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.55rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(250, 204, 21, 0.14);
   color: var(--yellow-main);
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.bottom-info p {
-  color: var(--text-dim);
-  font-size: 1.1rem;
-  line-height: 1.7;
+.bottom-copy h2 {
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
-  .methodology .card {
-    padding: 1.8rem;
-  }
-  
+.method-points {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.method-point {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 22px;
+  border: 1px solid rgba(250, 204, 21, 0.1);
+  background: rgba(255, 255, 255, 0.016);
+}
+
+.method-point span {
+  color: var(--yellow-main);
+  font-weight: 900;
+}
+
+@media (max-width: 980px) {
+  .method-grid,
   .bottom-info {
-    padding: 2rem;
-    margin-top: 3rem;
+    grid-template-columns: 1fr;
   }
 }

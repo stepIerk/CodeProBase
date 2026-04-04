@@ -1,27 +1,30 @@
 :root {
-    --bg-main: #0f0f0a;
-    --bg-gradient: linear-gradient(135deg, #1a1605, #2a2308);
+  --bg-main: #0f0f0a;
+  --bg-gradient: linear-gradient(180deg, #161306 0%, #0f0f0a 48%, #171205 100%);
+  --bg-elevated: rgba(31, 28, 14, 0.92);
+  --surface: rgba(255, 248, 220, 0.045);
+  --surface-strong: rgba(255, 235, 140, 0.08);
+  --surface-hover: rgba(255, 248, 220, 0.075);
 
-    --yellow-main: rgb(250, 204, 21);
-    --yellow-soft: #fde68a;
-    --yellow-dark: #eab308;
+  --yellow-main: #facc15;
+  --yellow-soft: #fcd436;
+  --yellow-dark: #ca8a04;
+  --amber-glow: rgba(250, 204, 21, 0.18);
+  --ember-glow: rgba(250, 204, 21, 0.1);
 
-    --text-main: #fffbea;
-    --text-dim: #d6d3a3;
+  --text-main: #fffbea;
+  --text-dim: #d6d3a3;
+  --text-soft: rgba(255, 251, 234, 0.72);
 
-    --glass: rgba(255, 255, 255, 0.06);
-    --glass-border: rgba(250, 204, 21, 0.25);
+  --glass: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(250, 204, 21, 0.16);
+  --line: rgba(250, 204, 21, 0.08);
+  --shadow-soft: 0 24px 54px rgba(0, 0, 0, 0.24);
+  --shadow-glow: 0 18px 42px rgba(250, 204, 21, 0.08);
 
-    --nav-height: 80px;
-
-    --p-bg-dark: #0f0c29;
-    --p-bg-gradient: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    --p-primary: #8b5cf6;
-    --p-primary-glow: #a78bfa;
-    --p-accent: #d8b4fe;
-    --p-text-main: #ffffff;
-    --p-text-dim: #cbd5e1;
-
-
-
+  --radius-lg: 32px;
+  --radius-md: 22px;
+  --radius-sm: 16px;
+  --nav-height: 80px;
+  --container-width: 1180px;
 }

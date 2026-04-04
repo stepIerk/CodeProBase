@@ -1,73 +1,102 @@
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X, ArrowUpRight } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+
+import { useBooking } from "../../context/BookingContext";
 import "./Navbar.css";
+
+const links = [
+  { path: "/", label: "Главная" },
+  { path: "/programs", label: "Программы" },
+  { path: "/methodology", label: "Методология" },
+  { path: "/pricing", label: "Цены" },
+];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const { openBooking } = useBooking();
 
-  useEffect(() => setOpen(false), [location]);
-
-  const links = [
-    { path: "/", label: "Главная" },
-    { path: "/programs", label: "Программы" },
-    { path: "/pricing", label: "Цены" },
-    {path: "/methodology", label:"Методология"}
-  ];
+  useEffect(() => {
+    setOpen(false);
+  }, [location.pathname]);
 
   return (
-    <nav className="navbar">
-      <div className="container nav-content">
-        <Link to="/" className="logo">CODEPROBASE</Link>
+    <header className="navbar-wrap">
+      <nav className="navbar container">
+        <Link to="/" className="logo">
+          CODEPROBASE
+        </Link>
 
         <div className="nav-links">
-          {links.map(l => (
+          {links.map((link) => (
             <Link
-              key={l.path}
-              to={l.path}
-              className={`nav-link ${location.pathname === l.path ? "active" : ""}`}
+              key={link.path}
+              to={link.path}
+              className={`nav-link ${location.pathname === link.path ? "active" : ""}`}
             >
-              {l.label}
+              {link.label}
             </Link>
           ))}
-          <a className="btn btn-primary small" href="https://t.me/your_bot">
-            Бот записи
-          </a>
-          {/* <a className="js-logo" href="https://t.me/your_bot">
-              WEBPROBASE
-            </a> */}
         </div>
 
-        <button className="mobile-btn" onClick={() => setOpen(!open)}>
-          {open ? <X /> : <Menu />}
-        </button>
-      </div>
+        <div className="nav-actions">
+          <button type="button" className="btn btn-primary nav-cta" onClick={openBooking}>
+            Записаться на урок
+            <ArrowUpRight size={18} />
+          </button>
+          <button
+            className="mobile-btn"
+            type="button"
+            aria-label={open ? "Закрыть меню" : "Открыть меню"}
+            onClick={() => setOpen((current) => !current)}
+          >
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </nav>
 
       <AnimatePresence>
         {open && (
           <motion.div
-            className="mobile-menu"
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
+            className="mobile-menu-shell"
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
           >
-            {links.map(l => (
-              <Link key={l.path} to={l.path} className="nav-link big">
-                {l.label}
-              </Link>
-            ))}
-            <a className="btn btn-primary small" href="https://t.me/your_bot">
-            Бот записи
-            </a>
-            {/* <a className="js-logo" href="https://t.me/your_bot">
-              WEBPROBASE
-            </a> */}
-            
+            <div className="mobile-menu container">
+              {links.map((link, index) => (
+                <motion.div
+                  key={link.path}
+                  initial={{ opacity: 0, x: 18 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 18 }}
+                  transition={{ delay: index * 0.05 }}
+                >
+                  <Link to={link.path} className="mobile-link">
+                    {link.label}
+                  </Link>
+                </motion.div>
+              ))}
+
+              <div className="mobile-actions">
+                <button
+                  type="button"
+                  className="btn btn-primary full"
+                  onClick={() => {
+                    setOpen(false);
+                    openBooking();
+                  }}
+                >
+                  Записаться на урок
+                </button>
+              </div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </header>
   );
 }

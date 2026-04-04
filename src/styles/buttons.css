@@ -1,33 +1,65 @@
 .btn {
-  padding: 14px 28px;
-  border-radius: 14px;
-  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  padding: 0.98rem 1.5rem;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   cursor: pointer;
   text-decoration: none;
-  border: none;
-  transition: 0.3s;
+  border: 1px solid transparent;
+  appearance: none;
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease,
+    background-color 0.28s ease;
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  gap: 0.65rem;
+  white-space: nowrap;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 20%, rgba(255, 255, 255, 0.18) 50%, transparent 80%);
+  transform: translateX(-120%);
+  transition: transform 0.65s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:hover::after {
+  transform: translateX(120%);
 }
 
 .btn-primary {
-  background: var(--yellow-main);
-  color: #1a1605;
-  box-shadow: 0 6px 20px rgba(250, 204, 21, 0.35);
+  background: linear-gradient(135deg, var(--yellow-main), var(--yellow-soft));
+  color: #161105;
+  box-shadow: 0 16px 34px rgba(250, 204, 21, 0.16);
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(250, 204, 21, 0.55);
+  box-shadow: 0 20px 42px rgba(250, 204, 21, 0.22);
 }
 
 .btn-outline {
-  border: 2px solid var(--yellow-main);
+  border-color: var(--glass-border);
   color: var(--text-main);
-  background: transparent;
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .btn-outline:hover {
-  background: rgba(250, 204, 21, 0.15);
+  border-color: rgba(250, 204, 21, 0.4);
+  background: rgba(250, 204, 21, 0.12);
+}
+
+.btn.full {
+  width: 100%;
 }

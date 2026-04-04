@@ -1,0 +1,68 @@
+# Зависимости
+node_modules/
+/.pnp
+.pnp.js
+.pnp.mjs
+.yarn/install-state.gz
+
+# Логи
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Директории сборки
+dist/
+dist-ssr/
+*.local
+
+# Файлы окружения
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Кэш
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vite/
+
+# Файлы IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Файлы покрытия тестов
+coverage/
+.nyc_output/
+
+# Файлы отладки
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# Директории для временных файлов
+tmp/
+temp/
+
+# Файлы ESLint и Prettier
+.eslintcache
+.prettiercache
+
+# Файлы TypeScript
+*.tsbuildinfo
+
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
