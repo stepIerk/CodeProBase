@@ -35,6 +35,7 @@ body::before {
   top: -10rem;
   right: -10rem;
   background: var(--amber-glow);
+  animation: drift-slow 20s ease-in-out infinite alternate;
 }
 
 body::after {
@@ -43,6 +44,43 @@ body::after {
   left: -9rem;
   top: 32vh;
   background: var(--ember-glow);
+  animation: drift-medium 20s ease-in-out infinite alternate;
+}
+
+@keyframes drift-slow {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-20rem, 8rem);
+  }
+  50% {
+    transform: translate(-12rem, 24rem);
+  }
+  75% {
+    transform: translate(-28rem, 14rem);
+  }
+  100% {
+    transform: translate(-16rem, 30rem);
+  }
+}
+
+@keyframes drift-medium {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(14rem, -8rem);
+  }
+  50% {
+    transform: translate(8rem, 12rem);
+  }
+  75% {
+    transform: translate(20rem, 4rem);
+  }
+  100% {
+    transform: translate(12rem, 20rem);
+  }
 }
 
 a {

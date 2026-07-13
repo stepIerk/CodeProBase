@@ -8,9 +8,10 @@ import "./Navbar.css";
 
 const links = [
   { path: "/", label: "Главная" },
-  { path: "/ege", label: "ЕГЭ" },
+    { path: "/ege", label: "ЕГЭ" },
   { path: "/programs", label: "Программы" },
   { path: "/methodology", label: "Методология" },
+
   { path: "/pricing", label: "Цены" },
 ];
 
@@ -33,7 +34,7 @@ export default function Navbar() {
     <header className="navbar-wrap">
       <nav className="navbar container">
         <Link to="/" className="logo">
-          CODEPROBASE
+          CODIBASE
         </Link>
 
         <div className="nav-links">
