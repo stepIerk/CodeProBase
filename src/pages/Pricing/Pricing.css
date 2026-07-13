@@ -35,11 +35,13 @@
 }
 
 .price-card.ege {
-  border-color: rgba(59, 130, 246, 0.24);
+  border-color: rgba(246, 59, 237, 0.24);
+  border-width: 2px;
 }
 
 .label {
   width: fit-content;
+  height: fit-content;
   padding: 0.45rem 0.72rem;
   border-radius: 999px;
   background: rgba(250, 204, 21, 0.14);

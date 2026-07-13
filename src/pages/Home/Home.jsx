@@ -221,7 +221,7 @@ export default function Home() {
               <Target size={16} />
               Подготовка к ЕГЭ по информатике
             </div>
-            <h2>Готовим к ЕГЭ на <span>высокий балл</span></h2>
+            <h2 className="section-title" style={{textAlign: 'left'}}>Готовлю к ЕГЭ на <span>высокий балл</span></h2>
             <p>
               Индивидуальная подготовка к ЕГЭ по информатике: разбор всех типов заданий,
               программирование на Python, пробные варианты и стратегия на экзамене.
@@ -268,7 +268,7 @@ export default function Home() {
               Программы обучения
               <ArrowRight size={18} />
             </Link>
-            <button type="button" className="btn btn-outline" onClick={openBooking}>
+            <button type="button" className="btn btn-outline" onClick={() => openBooking("general")}>
               Записаться на урок
             </button>
           </motion.div>
@@ -548,7 +548,7 @@ export default function Home() {
           <motion.div className="teacher-quote-grid" variants={staggerContainer}>
             <motion.div className="teacher-photo" variants={revealScale}>
               <div className="teacher-photo-ring" />
-              <img src="/CodeProBase/public/p.png" alt="Степан — преподаватель" className="teacher-img" />
+              <img src="/p.png" alt="Степан — преподаватель" className="teacher-img" />
             </motion.div>
 
             <motion.div className="teacher-text panel" variants={staggerContainer}>
@@ -655,7 +655,7 @@ export default function Home() {
             от первых игр до настоящих Web-проектов.
           </motion.p>
           <motion.div className="final-cta-actions" variants={revealUp}>
-            <button type="button" className="btn btn-primary" onClick={openBooking}>
+            <button type="button" className="btn btn-primary" onClick={() => openBooking("general")}>
               Записаться на урок
             </button>
             <Link to="/pricing" className="btn btn-outline">

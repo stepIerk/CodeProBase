@@ -20,6 +20,7 @@
   align-items: center;
   gap: 0.65rem;
   white-space: nowrap;
+  height: fit-content;
 }
 
 .btn::after {

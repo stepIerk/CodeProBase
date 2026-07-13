@@ -95,7 +95,7 @@ export default function EGE() {
           </motion.p>
 
           <motion.div className="ege-cta" variants={revealUp} custom={0.28}>
-            <button type="button" className="btn btn-primary" onClick={openBooking}>
+            <button type="button" className="btn btn-primary" onClick={() => openBooking("ege")}>
               Записаться на подготовку
             </button>
             <Link to="/pricing" className="btn btn-outline">
@@ -233,7 +233,7 @@ export default function EGE() {
             подготовки до экзамена.
           </motion.p>
           <motion.div className="final-cta-actions" variants={revealUp}>
-            <button type="button" className="btn btn-primary" onClick={openBooking}>
+            <button type="button" className="btn btn-primary" onClick={() => openBooking("ege")}>
               Записаться на пробное
             </button>
             <Link to="/pricing" className="btn btn-outline">

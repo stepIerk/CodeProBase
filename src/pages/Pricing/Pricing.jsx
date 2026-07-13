@@ -10,41 +10,45 @@ const pricing = [
   {
     label: "FAST",
     name: "Scratch Turbo",
-    price: "8 000 ₽",
-    unit: "/ месяц",
+    price: "1 200 ₽",
+    unit: "/ урок",
     accent: "warm",
     button: "btn btn-outline full",
-    cta: "Погнали",
+    cta: "Записаться",
+    preset: "fast",
     features: ["Персональный ментор", "Ускоренная программа", "Архитектура игр", "Гибкий график"],
   },
   {
     label: "GROUP",
     name: "Групповые",
-    price: "4 800 ₽",
-    unit: "/ месяц",
+    price: "1 000 ₽",
+    unit: "/ урок",
     accent: "soft",
     button: "btn btn-outline full",
     cta: "Записаться",
-    features: ["Группы до 6 детей", "4 занятия по 90 минут", "Совместные проекты", "Общий темп и мотивация"],
+    preset: "group",
+    features: ["Группы до 6 детей", "Совместные и личные проекты", "Общий темп и мотивация"],
   },
   {
     label: "EGE",
     name: "Подготовка к ЕГЭ",
-    price: "1 800 ₽",
-    unit: "/ урок",
+    price: "1 500 ₽",
+    unit: "/ час",
     accent: "ege",
     button: "btn btn-primary full",
     cta: "Записаться",
+    preset: "ege",
     features: ["Разбор всех типов заданий", "Программирование на Python", "Пробные экзамены с разбором", "Индивидуальный план до ЕГЭ"],
   },
   {
     label: "PRO",
     name: "Web & Индивидуально",
-    price: "1 500 ₽",
-    unit: "/ урок",
+    price: "2 000 ₽",
+    unit: "/ час",
     accent: "main",
     button: "btn btn-primary full",
-    cta: "Начать",
+    cta: "Записаться",
+    preset: "pro",
     features: ["React + Node.js", "Личные проекты в портфолио", "Гибкий график", "Максимум внимания"],
   },
 ];
@@ -104,7 +108,7 @@ export default function Pricing() {
                 ))}
               </ul>
 
-              <button type="button" className={plan.button} onClick={openBooking}>
+              <button type="button" className={plan.button} onClick={() => openBooking(plan.preset)}>
                 {plan.cta}
               </button>
             </motion.article>

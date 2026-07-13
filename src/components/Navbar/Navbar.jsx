@@ -51,7 +51,7 @@ export default function Navbar() {
         </div>
 
         <div className="nav-actions">
-          <button type="button" className="btn btn-primary nav-cta" onClick={openBooking}>
+          <button type="button" className="btn btn-primary nav-cta" onClick={() => openBooking("general")}>
             Записаться на урок
             <ArrowUpRight size={18} />
           </button>
@@ -94,9 +94,9 @@ export default function Navbar() {
                 <button
                   type="button"
                   className="btn btn-primary full"
-                  onClick={() => {
+                    onClick={() => {
                     setOpen(false);
-                    openBooking();
+                    openBooking("general");
                   }}
                 >
                   Записаться на урок
