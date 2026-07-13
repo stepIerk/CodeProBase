@@ -26,42 +26,42 @@ import "./Home.css";
 
 const metrics = [
   { value: "8+", label: "возраст старта" },
-  { value: "4", label: "шага траектории" },
+  { value: "4", label: "траектории роста" },
   { value: "React", label: "реальные проекты" },
 ];
 
 const stages = [
   {
     icon: Sparkles,
-    step: "Шаг 1",
+    step: "01",
     title: "Scratch",
-    text: "Первые алгоритмы, события и визуальная логика без страха перед синтаксисом.",
+    text: "Первые алгоритмы, события и визуальная логика без страха перед кодом.",
   },
   {
     icon: Code2,
-    step: "Шаг 2",
+    step: "02",
     title: "JavaScript",
-    text: "Переход к функциям, массивам и реальному коду на уже понятной базе.",
+    text: "Переход к функциям, массивам и реальному синтаксису на уже понятной базе.",
   },
   {
     icon: Globe,
-    step: "Шаг 3",
+    step: "03",
     title: "React",
     text: "Интерфейсы, компоненты и мышление современными приложениями.",
   },
   {
     icon: Cpu,
-    step: "Шаг 4",
+    step: "04",
     title: "Node.js",
-    text: "Серверная логика, API и понимание того, как работает полноценный продукт изнутри.",
+    text: "Серверная логика, API и понимание того, как работает полноценный продукт.",
   },
 ];
 
 const pillars = [
   {
     icon: Code2,
-    title: "От простого к сложному",
-    text: "Показываю, как из визуальных блоков шаг за шагом вырастает настоящий код, функции и архитектурное мышление.",
+    title: "Не просто блоки",
+    text: "Показываем, как из визуальной логики вырастает настоящий код, функции и архитектурное мышление.",
   },
   {
     icon: Globe,
@@ -70,13 +70,13 @@ const pillars = [
   },
   {
     icon: Cpu,
-    title: "Крепкая инженерная база",
-    text: "Мы скрепляем знания намертво. Алгоритмы, декомпозиция задач и системное мышление остаются с учеником навсегда.",
+    title: "Инженерная база",
+    text: "Алгоритмы, декомпозиция задач и системное мышление остаются с учеником дольше любого конкретного инструмента.",
   },
 ];
 
 const highlights = [
-  "Шаг за шагом: Scratch → JS",
+  "Scratch → JavaScript",
   "React + Node.js",
   "Онлайн-занятия",
   "Личные проекты",
@@ -86,17 +86,17 @@ const audience = [
   {
     icon: MonitorPlay,
     title: "Для ребёнка, который любит игры",
-    text: "Начинаем с понятных игровых проектов, чтобы интерес сразу превращался в практику и результат на первых же шагах.",
+    text: "Начинаем с понятных игровых проектов, чтобы интерес сразу превращался в практику и результат.",
   },
   {
     icon: BookOpenCheck,
     title: "Для новичка без опыта",
-    text: "Не нужен предварительный уровень. Материал в Stepler идёт поэтапно и объясняется самым простым языком.",
+    text: "Не нужен предварительный уровень. Материал идёт поэтапно и объясняется простым языком.",
   },
   {
     icon: Brain,
     title: "Для тех, кому нужна сильная база",
-    text: "Развиваем логику, умение делить сложную задачу на мелкие шаги и структурно мыслить, а не только нажимать кнопки.",
+    text: "Развиваем логику, умение анализировать задачи и структурно мыслить, а не только нажимать кнопки.",
   },
 ];
 
@@ -109,7 +109,7 @@ const lessonFlow = [
   {
     step: "02",
     title: "Практика на занятии",
-    text: "Ребёнок сразу делает свою игру, мини-механику или элемент проекта, закрепляя шаг на практике.",
+    text: "Ребёнок сразу делает свою игру, мини-механику или элемент проекта, чтобы видеть результат вживую.",
   },
   {
     step: "03",
@@ -119,7 +119,7 @@ const lessonFlow = [
   {
     step: "04",
     title: "Рост от проекта к проекту",
-    text: "Каждый следующий урок опирается на предыдущий, поэтому прогресс step-by-step ощущается последовательно и спокойно.",
+    text: "Каждое следующее занятие опирается на предыдущее, поэтому прогресс ощущается последовательно и спокойно.",
   },
 ];
 
@@ -150,36 +150,51 @@ const studentProjects = [
   },
 ];
 
+const reviews = [
+  {
+    name: "Марина, мама ученика 10 лет",
+    text: "Ребёнок всегда ждёт занятия. Для меня главное, что это не просто развлечение, а обучение новому, что пригодится в будущем.",
+  },
+  {
+    name: "Алексей, папа ученика 13 лет",
+    text: "Отличные объяснения. Сыну стало интересно программирование именно потому, что он быстро увидел связь между кодом и реальными сайтами.",
+  },
+  {
+    name: "Елена, мама ученицы 9 лет",
+    text: "После занятий всегда показывает новую игру. Сильно нравится, говорит что увлекательно.",
+  },
+];
+
 const faq = [
   {
     question: "Подойдёт ли обучение ребёнку, если он раньше не программировал?",
     answer:
-      "Да. Программа Stepler построена так, чтобы ребёнок мог начать с нуля, постепенно привыкнуть к логике задач и только потом переходить к серьёзным инструментам.",
+      "Да. Программа построена так, чтобы ребёнок мог начать с нуля, постепенно привыкнуть к логике задач и только потом переходить к более серьёзным инструментам.",
   },
   {
     question: "Нужен ли мощный компьютер?",
     answer:
-      "Для старта нет. Для Scratch и первых шагов достаточно обычного ноутбука. Для Web-направления профессиональная техника также не требуется.",
+      "Для старта нет. Для Scratch и первых шагов достаточно обычного ноутбука. Для Web-направления также не требуется профессиональная техника.",
   },
   {
     question: "Что получает родитель на выходе?",
     answer:
-      "Вы видите не абстрактные уроки, а конкретные результаты шаг за шагом: игры, мини-проекты, первый сайт и планомерное развитие логического мышления.",
+      "Вы видите не абстрактные уроки, а конкретные результаты: игры, мини-проекты, первый сайт и постепенное развитие логического мышления.",
   },
   {
     question: "Как понять, что ребёнку действительно интересно?",
     answer:
-      "На первых занятиях это видно очень быстро: если ребёнок начинает сам дорабатывать проект, задаёт вопросы и хочет показать результат, значит, мы на верном пути.",
+      "На первых занятиях это видно очень быстро: если ребёнок начинает сам дорабатывать проект, задаёт вопросы и хочет показать результат, значит интерес уже появился.",
   },
 ];
 
 const teacherQuote = [
   "Меня зовут Степан, я занимаюсь программированием более 5 лет и обучаю детей основам Scratch и JavaScript.",
   "На занятиях я не даю сухую теорию — ребёнок сразу создаёт свои игры и проекты, чтобы видеть результат с первых уроков.",
-  "Я выстраиваю обучение так, чтобы после простых игр в Scratch ребёнок уверенно переходил на следующую ступень — к созданию сайтов на JavaScript и React. Это помогает не просто поиграться, а понять, как программирование работает в реальной жизни.",
-  "Шаг за шагом мы развиваем логическое мышление и инженерную базу: ребёнок учится декомпозировать (делить на части) задачи, находить решения и мыслить структурно.",
-  "Я объясняю сложные темы простым языком и подбираю задания под текущий шаг ученика, чтобы ему было интересно и комфортно расти.",
-  "Моя цель — не просто научить синтаксису, а провести ученика за руку через все этапы, дав ему прочную базу для дальнейшего развития.",
+  "Я выстраиваю обучение так, чтобы после простых игр в Scratch ребёнок постепенно переходил на более серьёзный уровень — к созданию настоящих сайтов на JavaScript. Это помогает не просто поиграться, а понять, как программирование используется в реальной жизни.",
+  "Во время обучения также развивается логическое мышление и математические навыки: ребёнок учится анализировать задачи, находить решения и мыслить структурно.",
+  "Я объясняю сложные темы простым языком и подбираю задания под уровень ученика, чтобы ему было интересно и понятно.",
+  "Моя цель — не просто научить коду, а заинтересовать ребёнка программированием и дать ему прочную базу для дальнейшего развития.",
 ];
 
 export default function Home() {
@@ -193,6 +208,7 @@ export default function Home() {
       animate="visible"
       exit="exit"
     >
+
       <section className="container home-section">
         <motion.div
           className="spotlight panel"
@@ -200,17 +216,16 @@ export default function Home() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.25 }}
           variants={staggerContainer}
-          style={{ borderWidth: "3px", borderColor: "var(--yellow-main)" }}
         >
           <motion.div className="spotlight-copy" variants={revealUp}>
             <div className="badge">
               <Target size={16} />
-              Самое время начинать подготовку к ЕГЭ
+              Подготовка к ЕГЭ по информатике
             </div>
-            <h2 className="section-title" style={{textAlign: 'left'}}>ЕГЭ по информатике: идём к <span>высокому баллу</span> шаг за шагом</h2>
+            <h2 className="section-title" style={{textAlign: 'left'}}>Готовлю к ЕГЭ на <span>высокий балл</span></h2>
             <p>
-              Индивидуальная подготовка: планомерный разбор всех типов заданий от простого к сложному,
-              программирование на Python, пробные варианты и уверенная стратегия на экзамене.
+              Индивидуальная подготовка к ЕГЭ по информатике: разбор всех типов заданий,
+              программирование на Python, пробные варианты и стратегия на экзамене.
             </p>
             <Link to="/ege" className="btn btn-primary" style={{ marginTop: "0.5rem" }}>
               Подробнее о подготовке
@@ -220,10 +235,10 @@ export default function Home() {
 
           <motion.div className="spotlight-list" variants={staggerContainer}>
             {[
-              "Постепенный разбор всех заданий от 1 до 27 с упором на сложные номера",
+              "Разбор всех заданий от 1 до 27 с упором на сложные номера",
               "Программирование на Python: эффективные и безошибочные решения",
-              "Пробные экзамены с замером времени и детальным разбором каждого шага",
-              "Индивидуальный план под текущий уровень и нужный итоговый балл",
+              "Пробные экзамены с замером времени и детальным разбором",
+              "Индивидуальный план под текущий уровень и нужный балл",
             ].map((item, index) => (
               <motion.div key={item} className="spotlight-item" variants={revealUp} custom={index * 0.08}>
                 <span className="spotlight-index">0{index + 1}</span>
@@ -233,21 +248,20 @@ export default function Home() {
           </motion.div>
         </motion.div>
       </section>
-
       <section className="container home-hero">
         <motion.div className="home-copy" variants={staggerContainer}>
           <motion.div className="badge" variants={revealUp} custom={0.05}>
             <Sparkles size={16} />
-            Онлайн-школа Stepler Code
+            От первых блоков до React-приложений
           </motion.div>
 
           <motion.h1 className="section-title home-title" variants={revealUp} custom={0.12}>
-            Программирование <span>шаг за шагом</span> к сильной базе
+            Программирование как <span>сильная база</span>, а не набор уроков
           </motion.h1>
 
           <motion.p className="subtitle home-subtitle" variants={revealUp} custom={0.2}>
-            Обучение для детей и подростков. От первых блоков в Scratch до настоящей Web-разработки — 
-            постепенно, уверенно и с крепким инженерным фундаментом.
+            Обучение для детей и подростков, где Scratch становится не просто игрой, а входом в алгоритмы,
+            JavaScript и настоящую Web-разработку.
           </motion.p>
 
           <motion.div className="home-cta" variants={revealUp} custom={0.28}>
@@ -256,7 +270,7 @@ export default function Home() {
               <ArrowRight size={18} />
             </Link>
             <button type="button" className="btn btn-outline" onClick={() => openBooking("general")}>
-              Сделать первый шаг
+              Записаться на урок
             </button>
           </motion.div>
 
@@ -269,16 +283,17 @@ export default function Home() {
           </motion.div>
         </motion.div>
 
+
         <motion.div className="hero-stage" variants={revealScale} custom={0.18}>
           <div className="hero-stage-glow" />
           <div className="hero-stage-grid" />
 
           <div className="hero-stage-head">
-            <span className="hero-board-label">Траектория Stepler</span>
+            <span className="hero-board-label">Траектория роста</span>
             <h2>Scratch → JS → React → Node.js</h2>
             <p>
-              Вместо разрозненных тем ученик проходит ясный маршрут, где каждый следующий шаг — это 
-              логичное продолжение предыдущего.
+              Вместо разрозненных тем ученик проходит ясный маршрут, где каждый следующий этап выглядит
+              логичным продолжением предыдущего.
             </p>
           </div>
 
@@ -303,7 +318,7 @@ export default function Home() {
           <div className="hero-stage-footer">
             <div className="hero-stage-note">
               <span className="hero-board-label">Формат</span>
-              <strong>Живые занятия с разбором проектов и планомерной практикой</strong>
+              <strong>Живые занятия с разбором проектов и понятной практикой</strong>
             </div>
 
             <div className="hero-metrics">
@@ -318,6 +333,8 @@ export default function Home() {
         </motion.div>
       </section>
 
+      
+
       <section className="container home-section">
         <motion.div
           className="section-head centered"
@@ -331,10 +348,10 @@ export default function Home() {
             Кому подойдёт обучение
           </motion.div>
           <motion.h2 className="section-title home-section-title" variants={revealUp}>
-            Идеально для <span>первого старта</span> и серьёзного роста
+            Подходит и для <span>первого старта</span>, и для серьёзного роста
           </motion.h2>
           <motion.p className="section-subtitle" variants={revealUp}>
-            Программа выстроена так, чтобы ребёнок не потерял интерес в самом начале пути и при этом плавно вырос
+            Программа выстроена так, чтобы ребёнок не потерял интерес в начале и при этом мог вырасти
             до сильного проектного уровня.
           </motion.p>
         </motion.div>
@@ -368,13 +385,13 @@ export default function Home() {
         >
           <motion.div className="badge" variants={revealUp}>
             <Workflow size={16} />
-            Методология Stepler
+            Почему этот формат работает
           </motion.div>
           <motion.h2 className="section-title home-section-title" variants={revealUp}>
             Сильная база строится из <span>маленьких шагов</span>
           </motion.h2>
           <motion.p className="section-subtitle" variants={revealUp}>
-            Когда темы идут в правильной последовательности, ребёнок не теряет мотивацию и быстрее понимает,
+            Когда темы идут в правильной последовательности, ребёнок не теряет интерес и быстрее понимает,
             как связаны алгоритмы, код и реальные проекты.
           </motion.p>
         </motion.div>
@@ -421,7 +438,7 @@ export default function Home() {
           <motion.div className="spotlight-list" variants={staggerContainer}>
             {[
               "Понимание алгоритмов, циклов, событий и реакций на действия пользователя",
-              "Плавный переход от визуальной среды к текстовому коду без лишнего стресса",
+              "Переход от визуальной среды к текстовому коду без лишнего стресса",
               "Первый законченный проект, который можно показать как результат обучения",
             ].map((item, index) => (
               <motion.div key={item} className="spotlight-item" variants={revealUp} custom={index * 0.08}>
@@ -446,7 +463,7 @@ export default function Home() {
             Как проходит занятие
           </motion.div>
           <motion.h2 className="section-title home-section-title" variants={revealUp}>
-            От теории к <span>своему проекту</span> уже на уроке
+            От объяснения к <span>своему проекту</span> уже на уроке
           </motion.h2>
         </motion.div>
 
@@ -483,7 +500,7 @@ export default function Home() {
             Проекты, которые показывают <span>реальный прогресс</span>
           </motion.h2>
           <motion.p className="section-subtitle" variants={revealUp}>
-            Уже на ранних шагах ребёнок видит конкретный результат: игру, механику, сайт или интерфейс.
+            Даже на ранних этапах ребёнок видит конкретный результат: игру, механику, сайт или интерфейс.
             Это помогает не терять мотивацию и ощущать рост.
           </motion.p>
         </motion.div>
@@ -524,15 +541,15 @@ export default function Home() {
           <motion.div className="teacher-quote-head" variants={revealUp}>
             <div className="badge">
               <MessageSquareQuote size={16} />
-              От преподавателя Stepler
+              От преподавателя
             </div>
-            <h2 className="section-title">Подход, в котором сложный код осваивается <span>step by step</span></h2>
+            <h2 className="section-title">Подход, в котором теория сразу <span>превращается в действие</span></h2>
           </motion.div>
 
           <motion.div className="teacher-quote-grid" variants={staggerContainer}>
             <motion.div className="teacher-photo" variants={revealScale}>
               <div className="teacher-photo-ring" />
-              <img src={pimg} alt="Степан — основатель Stepler" className="teacher-img" />
+              <img src={pimg} alt="Степан — преподаватель" className="teacher-img" />
             </motion.div>
 
             <motion.div className="teacher-text panel" variants={staggerContainer}>
@@ -546,6 +563,43 @@ export default function Home() {
           </motion.div>
         </motion.div>
       </section>
+
+      {/* <section className="container home-section">
+        <motion.div
+          className="section-head centered"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={staggerContainer}
+        >
+          <motion.div className="badge" variants={revealUp}>
+            <Star size={16} />
+            Отзывы
+          </motion.div>
+          <motion.h2 className="section-title home-section-title" variants={revealUp}>
+            Что отмечают <span>родители учеников</span>
+          </motion.h2>
+        </motion.div>
+
+        <motion.div
+          className="review-grid"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.15 }}
+          variants={staggerContainer}
+        >
+          {reviews.map((review) => (
+            <motion.article key={review.name} className="review-card elevated-card" variants={revealScale}>
+              <CheckCircle2 size={18} className="review-icon" />
+              <p>{review.text}</p>
+              <strong>{review.name}</strong>
+            </motion.article>
+          ))}
+        </motion.div>
+      </section> */}
+
+      {/* ———— EGE Section ———— */}
+      
 
       <section className="container home-section">
         <motion.div
@@ -591,7 +645,7 @@ export default function Home() {
           <motion.div variants={revealUp}>
             <div className="badge">
               <Sparkles size={16} />
-              Шагните в IT
+              Начните с первого шага
             </div>
           </motion.div>
           <motion.h2 className="section-title" variants={revealUp}>
@@ -599,7 +653,7 @@ export default function Home() {
           </motion.h2>
           <motion.p className="section-subtitle" variants={revealUp}>
             Запишитесь на урок и посмотрите, как обучение может превратиться в понятный и интересный путь
-            от простых игр до настоящих Web-проектов.
+            от первых игр до настоящих Web-проектов.
           </motion.p>
           <motion.div className="final-cta-actions" variants={revealUp}>
             <button type="button" className="btn btn-primary" onClick={() => openBooking("general")}>

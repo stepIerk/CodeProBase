@@ -44,7 +44,7 @@ export default function Methodology() {
             Метод обучения
           </motion.div>
           <motion.h1 className="section-title methodology-title" variants={revealUp}>
-            От визуальной логики к <span>промышленному коду</span>
+            От визуальной логики к <span>промышленному коду</span> шаг за шагом
           </motion.h1>
           <motion.p className="section-subtitle" variants={revealUp}>
             Подход построен на принципе "от простого к сложному". Мы не читаем сухую теорию, а делаем

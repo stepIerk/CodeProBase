@@ -34,7 +34,7 @@ export default function Navbar() {
     <header className="navbar-wrap">
       <nav className="navbar container">
         <Link to="/" className="logo">
-          CODIBASE
+          STEPLER CODE
         </Link>
 
         <div className="nav-links">
