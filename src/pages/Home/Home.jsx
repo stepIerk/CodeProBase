@@ -13,6 +13,7 @@ import {
   MonitorPlay,
   Sparkles,
   Star,
+  Target,
   Trophy,
   Workflow,
 } from "lucide-react";
@@ -206,6 +207,46 @@ export default function Home() {
       animate="visible"
       exit="exit"
     >
+
+      <section className="container home-section">
+        <motion.div
+          className="spotlight panel"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.25 }}
+          variants={staggerContainer}
+        >
+          <motion.div className="spotlight-copy" variants={revealUp}>
+            <div className="badge">
+              <Target size={16} />
+              Подготовка к ЕГЭ по информатике
+            </div>
+            <h2>Готовим к ЕГЭ на <span>высокий балл</span></h2>
+            <p>
+              Индивидуальная подготовка к ЕГЭ по информатике: разбор всех типов заданий,
+              программирование на Python, пробные варианты и стратегия на экзамене.
+            </p>
+            <Link to="/ege" className="btn btn-primary" style={{ marginTop: "0.5rem" }}>
+              Подробнее о подготовке
+              <ArrowRight size={18} />
+            </Link>
+          </motion.div>
+
+          <motion.div className="spotlight-list" variants={staggerContainer}>
+            {[
+              "Разбор всех заданий от 1 до 27 с упором на сложные номера",
+              "Программирование на Python: эффективные и безошибочные решения",
+              "Пробные экзамены с замером времени и детальным разбором",
+              "Индивидуальный план под текущий уровень и нужный балл",
+            ].map((item, index) => (
+              <motion.div key={item} className="spotlight-item" variants={revealUp} custom={index * 0.08}>
+                <span className="spotlight-index">0{index + 1}</span>
+                <p>{item}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </motion.div>
+      </section>
       <section className="container home-hero">
         <motion.div className="home-copy" variants={staggerContainer}>
           <motion.div className="badge" variants={revealUp} custom={0.05}>
@@ -240,6 +281,7 @@ export default function Home() {
             ))}
           </motion.div>
         </motion.div>
+
 
         <motion.div className="hero-stage" variants={revealScale} custom={0.18}>
           <div className="hero-stage-glow" />
@@ -289,6 +331,8 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+
+      
 
       <section className="container home-section">
         <motion.div
@@ -502,9 +546,12 @@ export default function Home() {
           </motion.div>
 
           <motion.div className="teacher-quote-grid" variants={staggerContainer}>
-          
+            <motion.div className="teacher-photo" variants={revealScale}>
+              <div className="teacher-photo-ring" />
+              <img src="/CodeProBase/public/p.png" alt="Степан — преподаватель" className="teacher-img" />
+            </motion.div>
+
             <motion.div className="teacher-text panel" variants={staggerContainer}>
-              <span>Преподаватель:</span>
               {teacherQuote.map((paragraph, index) => (
                 <motion.p key={paragraph} variants={revealUp} custom={index * 0.06}>
                   {paragraph}
@@ -516,7 +563,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <section className="container home-section">
+      {/* <section className="container home-section">
         <motion.div
           className="section-head centered"
           initial="hidden"
@@ -548,7 +595,10 @@ export default function Home() {
             </motion.article>
           ))}
         </motion.div>
-      </section>
+      </section> */}
+
+      {/* ———— EGE Section ———— */}
+      
 
       <section className="container home-section">
         <motion.div

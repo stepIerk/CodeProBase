@@ -1,0 +1,5 @@
+/* @supports (corner-shape:squircle) {
+    :where(*) {
+        corner-shape: superellipse(2.5);
+    }
+} */

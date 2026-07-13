@@ -395,14 +395,14 @@
   font-size: 0.88rem;
 }
 
+/* ——— Teacher Quote ——— */
 .teacher-quote {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 1.5rem;
   padding: 1.6rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .teacher-quote-head {
@@ -410,6 +410,49 @@
   gap: 1rem;
   justify-items: center;
   text-align: center;
+}
+
+.teacher-quote-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ——— Teacher photo ——— */
+.teacher-photo {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 160px;
+}
+
+.teacher-photo-ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  opacity: 0.35;
+  animation: teacher-ring-pulse 3s ease-in-out infinite;
+}
+
+@keyframes teacher-ring-pulse {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.04); }
+}
+
+.teacher-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(250, 204, 21, 0.2);
+  background: var(--surface);
 }
 
 .teacher-card {
@@ -445,6 +488,10 @@
   display: grid;
   gap: 0.8rem;
   padding: 16px;
+  position: relative;
+  flex: 1;
+  min-width: 280px;
+  max-width: 650px;
 }
 
 .teacher-text p {
@@ -464,11 +511,10 @@
   content: none;
   width: 3px;
   background: var(--yellow-main);
-  top: 60px;
-  bottom: 18px;
+  top: 20px;
+  bottom: 20px;
   left: 18px;
   border-radius: 999px;
-
 }
 
 .review-card {

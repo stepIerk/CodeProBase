@@ -9,6 +9,7 @@ import Home from "./pages/Home/Home";
 import Programs from "./pages/Programs/Programs";
 import Pricing from "./pages/Pricing/Pricing";
 import Methodology from "./pages/Methodology/Methodology";
+import EGE from "./pages/EGE/EGE";
 
 import "./styles/variables.css";
 import "./styles/globals.css";
@@ -24,6 +25,7 @@ function AnimatedRoutes() {
         <Route path="/programs" element={<Programs />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/methodology" element={<Methodology />} />
+        <Route path="/ege" element={<EGE />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </AnimatePresence>

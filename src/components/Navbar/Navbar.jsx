@@ -8,6 +8,7 @@ import "./Navbar.css";
 
 const links = [
   { path: "/", label: "Главная" },
+  { path: "/ege", label: "ЕГЭ" },
   { path: "/programs", label: "Программы" },
   { path: "/methodology", label: "Методология" },
   { path: "/pricing", label: "Цены" },
@@ -22,6 +23,12 @@ export default function Navbar() {
     setOpen(false);
   }, [location.pathname]);
 
+  const scrollToTop = () => {
+    console.log('gg')
+    window.scrollTo({top: 0,
+  behavior: 'instant'});
+  }
+
   return (
     <header className="navbar-wrap">
       <nav className="navbar container">
@@ -35,7 +42,9 @@ export default function Navbar() {
               key={link.path}
               to={link.path}
               className={`nav-link ${location.pathname === link.path ? "active" : ""}`}
+              onClick={scrollToTop}
             >
+              
               {link.label}
             </Link>
           ))}

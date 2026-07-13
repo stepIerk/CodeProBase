@@ -29,7 +29,6 @@ dist-ssr/
 .parcel-cache/
 .next/
 .nuxt/
-.vite/
 
 # Файлы IDE
 .vscode/

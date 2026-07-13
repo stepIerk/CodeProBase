@@ -5,14 +5,21 @@ const BookingContext = createContext(null);
 export function BookingProvider({ children }) {
   const [isOpen, setIsOpen] = useState(false);
 
+  const openBooking = () => {
+    setIsOpen(true);
+  }
+
   const value = useMemo(
     () => ({
       isOpen,
-      openBooking: () => setIsOpen(true),
+      openBooking: openBooking,
       closeBooking: () => setIsOpen(false),
     }),
     [isOpen],
   );
+
+
+  
 
   return <BookingContext.Provider value={value}>{children}</BookingContext.Provider>;
 }
