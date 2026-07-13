@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import pimg from "../../assets/p.png";
 import {
   ArrowRight,
   BookOpenCheck,
@@ -548,7 +549,7 @@ export default function Home() {
           <motion.div className="teacher-quote-grid" variants={staggerContainer}>
             <motion.div className="teacher-photo" variants={revealScale}>
               <div className="teacher-photo-ring" />
-              <img src="/p.png" alt="Степан — преподаватель" className="teacher-img" />
+              <img src={pimg} alt="Степан — преподаватель" className="teacher-img" />
             </motion.div>
 
             <motion.div className="teacher-text panel" variants={staggerContainer}>
