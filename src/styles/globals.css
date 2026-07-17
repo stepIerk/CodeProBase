@@ -99,6 +99,13 @@ a {
 
 .app-shell {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-shell > *:nth-child(2) {
+  flex: 1;
 }
 
 .app-shell::before {

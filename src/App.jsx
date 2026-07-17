@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route, useLocation } from "react-router-d
 import { AnimatePresence } from "framer-motion";
 
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 import BookingModal from "./components/BookingModal/BookingModal";
 import { BookingProvider } from "./context/BookingContext";
 import Home from "./pages/Home/Home";
@@ -10,6 +11,7 @@ import Programs from "./pages/Programs/Programs";
 import Pricing from "./pages/Pricing/Pricing";
 import Methodology from "./pages/Methodology/Methodology";
 import EGE from "./pages/EGE/EGE";
+
 
 import "./styles/variables.css";
 import "./styles/globals.css";
@@ -40,6 +42,7 @@ export default function App() {
           <Navbar />
           <AnimatedRoutes />
           <BookingModal />
+          <Footer />
         </div>
       </BookingProvider>
     </Router>

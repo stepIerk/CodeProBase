@@ -35,7 +35,7 @@
 }
 
 .price-card.ege {
-  border-color: rgba(246, 59, 237, 0.24);
+  border-color: var(--yellow-main);
   border-width: 2px;
 }
 

@@ -28,6 +28,10 @@ const MESSAGES = {
   pro: encodeURIComponent(
     "Здравствуйте, хочу записаться на индивидуальные занятия по Web-разработке"
   ),
+  /** Заказ сайта */
+  site: encodeURIComponent(
+    "Здравствуйте, хотел бы заказать сайт!"
+  ),
 };
 
 const BookingContext = createContext(null);

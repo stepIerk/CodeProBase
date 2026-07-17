@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import pimg from "../../assets/p.png";
+import AutoPlayVideo from "../../components/AutoPlayVideo/AutoPlayVideo";
+import platformerVideo from "../../assets/platformer-demo.mp4";
 import {
   ArrowRight,
   BookOpenCheck,
@@ -135,6 +137,7 @@ const studentProjects = [
     title: "Платформер с логикой врагов",
     result: "Ребёнок научился работать с условиями, клонами и движением объектов в более сложной игре.",
     stack: ["GameDev", "Логика", "Клонирование"],
+    video: platformerVideo,
   },
   {
     age: "13 лет",
@@ -147,6 +150,7 @@ const studentProjects = [
     title: "Мини-приложение на React",
     result: "Старший ученик собрал интерфейс с компонентами, состоянием и логикой переключения экранов.",
     stack: ["React", "Компоненты", "UI"],
+    video: null,
   },
 ];
 
@@ -331,7 +335,7 @@ export default function Home() {
             Кому подойдёт обучение
           </motion.div>
           <motion.h2 className="section-title home-section-title" variants={revealUp}>
-            Идеально для <span>первого старта</span> и серьёзного роста
+            Идеально для <span>старта</span> и серьёзного роста
           </motion.h2>
           <motion.p className="section-subtitle" variants={revealUp}>
             Программа выстроена так, чтобы ребёнок не потерял интерес в самом начале пути и при этом плавно вырос
@@ -503,6 +507,9 @@ export default function Home() {
               </div>
               <h3>{project.title}</h3>
               <p>{project.result}</p>
+              {project.video && (
+                <AutoPlayVideo src={project.video} />
+              )}
               <div className="project-tags">
                 {project.stack.map((tag) => (
                   <span key={tag}>{tag}</span>
